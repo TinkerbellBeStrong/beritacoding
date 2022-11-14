@@ -9,11 +9,12 @@ class Page extends CI_Controller
 			'title' => 'BeritaCoding',
 		];
         $this->load->view('home', $data);
+        
     }
     public function about()
     {
         $data['meta'] = [
-			'title' => 'BeritaCoding',
+			'title' => 'About BeritaCoding',
 		];
         // fungsi untuk me-load view about.php
         $this->load->view('about', $data);
@@ -22,7 +23,7 @@ class Page extends CI_Controller
     public function contact()
     {
         $data['meta'] = [
-			'title' => 'BeritaCoding',
+			'title' => 'Contact Us',
 		];
         if ($this->input->method() === 'post') {
             print_r($this->input->post());
