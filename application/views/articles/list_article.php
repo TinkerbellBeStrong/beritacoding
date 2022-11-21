@@ -8,11 +8,13 @@
         <h1>List Artikel</h1>
         <ul>
             <?php foreach ($articles as $article) : ?>
-                <li><?= $article['title'] ?></li>
-                <p><?= $article['content'] ?></p>
+                <li>
+                    <a href="<?= site_url('article/'.$article->slug) ?>">
+                        <?= $article->title ? html_escape($article->title) : "No Title" ?>
+                    </a>
+                </li>
             <?php endforeach ?>
         </ul>
     <?php $this->load->view('_partials/footer.php'); ?>
 </body>
-
 </html>
