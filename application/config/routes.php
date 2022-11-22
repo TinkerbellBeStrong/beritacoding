@@ -56,3 +56,6 @@ $route['translate_uri_dashes'] = FALSE;
 $route['about'] = 'page/about';
 $route['contact'] = 'page/contact';
 $route['article/(:any)'] = 'article/show/$1';
+
+//route ini untuk halaman admin
+$route['admin'] = 'admin/dasboard';

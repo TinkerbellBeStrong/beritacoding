@@ -25,10 +25,26 @@ class Page extends CI_Controller
         $data['meta'] = [
 			'title' => 'Contact Us',
 		];
+
         if ($this->input->method() === 'post') {
-            print_r($this->input->post());
-        }
-        // fungsi untuk me-load view contact.php
+            $this->load->model('feedback_model');
+        
+            // @TODO: lakukan validasi di sini sebelum insert ke model
+        
+            $feedback = [
+              'id' => uniqid('', true), // genearate id unik
+              'name' => $this->input->post('name'),
+              'email' => $this->input->post('email'),
+              'message' => $this->input->post('message')
+            ];
+        
+            $feedback_saved = $this->feedback_model->insert($feedback);
+        
+            if ($feedback_saved) {
+              return $this->load->view('contact_thanks');
+            }
+          }
         $this->load->view('contact', $data);
+        
     }
 }

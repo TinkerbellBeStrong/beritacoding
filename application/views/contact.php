@@ -22,7 +22,6 @@
                 <label for="messaage">Message</label><br>
                 <textarea name="message" cols="30" rows="5" placeholder="write your message" required></textarea>
             </div>
-
             <div>
                 <input type="submit" value="Kirim">
                 <input type="reset" value="Reset">
