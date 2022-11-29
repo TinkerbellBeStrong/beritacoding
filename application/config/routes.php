@@ -58,4 +58,4 @@ $route['contact'] = 'page/contact';
 $route['article/(:any)'] = 'article/show/$1';
 
 //route ini untuk halaman admin
-$route['admin'] = 'admin/dasboard';
+$route['admin'] = 'admin/dashboard';
